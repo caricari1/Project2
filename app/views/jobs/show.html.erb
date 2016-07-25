@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+
+<tbody>
+    <tr>
+      <td><%= @job.title %></td>
+      <td><%= @job.organization %></td>
+      <td><%= @job.location %></td>
+    </td>
+</tbody>
+</table>
+<%= link_to "Update", edit_job_path(@job) %><br>
+<%= link_to "Delete", job_path(@job.id), method: "DELETE" %>

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+
+<tbody>
+<%= form_for(@job) do |f| %>
+ <tr>
+    <td><%= f.text_field :title %></td>
+    <td><%= f.text_field :organization %></td>
+    <td><%= f.text_field :location %></td>
+  <td>
+    <%= f.submit "Create" %>
+  </td>
+</tr>
+<% end %>
+</tbody>
+</table>

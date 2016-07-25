@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  organization: MyString
+  location: MyString
+  salary: MyString
+  description: MyText
+  date_posted: 2016-07-24
+  application_deadline: 2016-07-24
+  applied: false
+  interview: false
+  offer: false
+  other_deadline: 2016-07-24
+  notes: MyText
+  user_id: 1
+
+two:
+  title: MyString
+  organization: MyString
+  location: MyString
+  salary: MyString
+  description: MyText
+  date_posted: 2016-07-24
+  application_deadline: 2016-07-24
+  applied: false
+  interview: false
+  offer: false
+  other_deadline: 2016-07-24
+  notes: MyText
+  user_id: 1
