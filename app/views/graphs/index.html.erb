@@ -1,8 +1,10 @@
-<h1>Graphs</h1>
-<h2>Total Jobs: <%= @jobs.count %></h2>
-<h2>Applied: </h2>
-<h2>Interviews: </h2>
-<h2>Offers: </h2>
+
+<section>
+    <h2>Total Jobs: <%= @jobs.count %></h2>
+    <h2>Applied:<%= @applied.count %></h2>
+    <h2>Interviews: </h2>
+    <h2>Offers: </h2>
+</section>
 
 <%= bar_chart @jobs.group(:city).count %>
 

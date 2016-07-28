@@ -1,3 +1,4 @@
+<div class="content">
 <table>
     <tr>
       <th>Title</th>
@@ -38,15 +39,15 @@
       <td><%= @job.offer_date %></td>
     </tr>
 
-    <tr colspan="4">
-      <td>Description</td>
+    <tr>
+      <th colspan="5">Description</th>
     </tr>
 
     <tr>
-      <td><%= @job.description %></td>
+      <td colspan="5" style="height:150px"><%= @job.description %></td>
     </tr>
-
-
 </table>
-<button type="button"><%= link_to "Update", edit_job_path(@job) %></button>
-<button type="button"><%= link_to "Delete", job_path(@job.id), method: "DELETE" %></button>
+
+<button class="button"><%= link_to "Edit", edit_job_path(@job) %></button>
+<button class="button"><%= link_to "Delete", job_path(@job.id), method: "DELETE" %></button>
+<div>

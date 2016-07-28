@@ -6,7 +6,7 @@
       <th>Organization</th>
       <th>City</th>
       <th>Salary</th>
-      <th>Date Posted</th>
+      <th>View</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
@@ -16,7 +16,7 @@
     <tr id="searchbox">
       <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
-      <%= submit_tag "Search Job Title", :name => nil %>
+      <%= submit_tag "Search Job Titles", class: 'button' %>
       <% end %>
     <% @jobs.each do |job| %>
     <tr>
@@ -24,7 +24,7 @@
         <td><%= job.organization %></td>
         <td><%= job.city %></td>
         <td><%= job.salary %></td>
-        <td><%= job.date_posted %></td>
+        <td><%= link_to 'View', job_path(job) %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to "Delete", job_path(job), method: "DELETE" %></td>
       </tr>
@@ -32,4 +32,4 @@
   </tbody>
 </table>
 
-<button type="button"><%= link_to 'Add Job', 'jobs/new' %></button>
+<button class="button"><%= link_to 'Add Job', 'jobs/new' %></button>

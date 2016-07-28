@@ -5,10 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div>
+  <header>
+    <div>
+    <h1>Search Organizer</h1>
+    </div>
+    <div>
+      <h2><%= link_to "Dashboard",graphs_path %></h2>
+    </div>
+    <div>
+      <h2><%= link_to "All Jobs", jobs_path %></h2>
+    </div>
+  </header>
+</div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

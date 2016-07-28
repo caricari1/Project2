@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   delete '/jobs/:id' =>  'jobs#destroy'
 
-  get '/graphs' => 'graphs#index'
+  get '/graphs' => 'graphs#index', as: :graphs
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

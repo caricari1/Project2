@@ -1,10 +1,54 @@
-<div class='job'>
+
+
+<div class="content">
   <%= form_for(@job) do |f| %>
-      <%= f.text_field :title %>
-      <%= f.text_field :organization %>
-      <%= f.text_field :city %>
-      <%= f.text_field :salary %>
-      <%= f.date_field :applied_date %>
-      <%= f.submit "Update"%>
-    <% end %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Organization</th>
+      <th>City</th>
+      <th>Salary</th>
+    </tr>
+
+    <tr>
+      <td><%= f.text_field :title %></td>
+      <td><%= f.text_field :organization %></td>
+      <td><%= f.text_field :city %></td>
+      <td><%= f.number_field :salary %></td>
+    </tr>
+
+    <tr>
+      <th>Date Posted</th>
+      <th>Application Deadline</th>
+      <th>Date Applied</th>
+      <th>Other Deadline</th>
+    </tr>
+
+    <tr>
+      <td><%= f.date_field :date_posted %></td>
+      <td><%= f.date_field :application_deadline %></td>
+      <td><%= f.date_field :applied_date %></td>
+      <td><%= f.date_field :other_deadline %></td>
+    </tr>
+
+    <tr>
+      <th>Interview Date</th>
+      <th>Offer Date</th>
+    </tr>
+
+    <tr>
+      <td><%= f.date_field :interview_date %></td>
+      <td><%= f.date_field :offer_date %></td>
+    </tr>
+
+    <tr>
+      <th colspan="4">Description</th>
+    </tr>
+
+    <tr>
+      <td colspan="5" style="height:150px"><%= f.text_area :description, size: "100x25"%></td>
+    </tr>
+</table>
+    <%= f.submit "Update", :class => 'button' %>
+  <% end %>
 </div>
