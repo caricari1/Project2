@@ -1,0 +1,11 @@
+<h1>Graphs</h1>
+<h2>Total Jobs: <%= @jobs.count %></h2>
+<h2>Applied: </h2>
+<h2>Interviews: </h2>
+<h2>Offers: </h2>
+
+<%= bar_chart @jobs.group(:city).count %>
+
+<%= pie_chart @buckets %>
+
+ <%= line_chart @jobs.group_by_week(:applied_date).count %>

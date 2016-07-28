@@ -1,13 +1,17 @@
 class JobsController < ApplicationController
 
+
   def index
-    @jobs = Job.all
+    if params[:search]
+      @jobs = Job.search(params[:search]).order("created_at DESC")
+    else
+      @jobs = Job.all
+    end
   end
 
   def new
     @job = Job.new
   end
-
 
   def create
     @job = Job.new(job_params)
@@ -48,7 +52,18 @@ class JobsController < ApplicationController
     params.require(:job).permit(
       :title,
       :organization,
-      :location,
+      :city,
+      :salary,
+      :description,
+      :date_posted,
+      :application_deadline,
+      :applied,
+      :interview,
+      :offer,
+      :other_deadline,
+      :notes,
+      :user_id,
+      :applied_date
     )
   end
 

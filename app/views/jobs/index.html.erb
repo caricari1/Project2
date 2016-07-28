@@ -4,27 +4,32 @@
     <tr>
       <th>Title</th>
       <th>Organization</th>
-      <th>Location</th>
+      <th>City</th>
       <th>Salary</th>
       <th>Date Posted</th>
-      <th>Application Deadline</th>
-      <th>Applied?</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
   <tbody>
+    <tr id="searchbox">
+      <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+      <%= submit_tag "Search Job Title", :name => nil %>
+      <% end %>
     <% @jobs.each do |job| %>
-      <tr>
+    <tr>
         <td><%= job.title %></td>
         <td><%= job.organization %></td>
-        <td><%= job.location %></td>
+        <td><%= job.city %></td>
         <td><%= job.salary %></td>
         <td><%= job.date_posted %></td>
-        <td><%= job.application_deadline %></td>
-        <td><%= job.applied %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to "Delete", job_path(job), method: "DELETE" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Add Job', 'jobs/new' %>
+<button type="button"><%= link_to 'Add Job', 'jobs/new' %></button>

@@ -1,19 +1,52 @@
 <table>
-  <thead>
     <tr>
       <th>Title</th>
       <th>Organization</th>
-      <th>Location</th>
+      <th>City</th>
+      <th>Salary</th>
     </tr>
-  </thead>
 
-<tbody>
     <tr>
       <td><%= @job.title %></td>
       <td><%= @job.organization %></td>
-      <td><%= @job.location %></td>
-    </td>
-</tbody>
+      <td><%= @job.city %></td>
+      <td><%= @job.salary %></td>
+      <td><%= @job.applied_date %></td>
+    </tr>
+
+    <tr>
+      <th>Date Posted</th>
+      <th>Application Deadline</th>
+      <th>Date Applied</th>
+      <th>Other Deadline</th>
+    </tr>
+
+    <tr>
+      <td><%= @job.date_posted %></td>
+      <td><%= @job.application_deadline %></td>
+      <td><%= @job.applied_date %></td>
+      <td><%= @job.other_deadline %></td>
+    </tr>
+
+    <tr>
+      <th>Interview Date</th>
+      <th>Offer Date</th>
+    <tr>
+
+    <tr>
+      <td><%= @job.interview_date %></td>
+      <td><%= @job.offer_date %></td>
+    </tr>
+
+    <tr colspan="4">
+      <td>Description</td>
+    </tr>
+
+    <tr>
+      <td><%= @job.description %></td>
+    </tr>
+
+
 </table>
-<%= link_to "Update", edit_job_path(@job) %><br>
-<%= link_to "Delete", job_path(@job.id), method: "DELETE" %>
+<button type="button"><%= link_to "Update", edit_job_path(@job) %></button>
+<button type="button"><%= link_to "Delete", job_path(@job.id), method: "DELETE" %></button>

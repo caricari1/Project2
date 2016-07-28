@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   delete '/jobs/:id' =>  'jobs#destroy'
 
+  get '/graphs' => 'graphs#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

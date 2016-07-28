@@ -1,22 +1,49 @@
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Organization</th>
-      <th>Location</th>
-    </tr>
-  </thead>
-
-<tbody>
 <%= form_for(@job) do |f| %>
- <tr>
+<table>
+
+ <tr align="left">
+    <th>Title</th>
+    <th>Organization</th>
+    <th>City</th>
+    <th>Salary</th>
+  </tr>
+  <tr align="left">
     <td><%= f.text_field :title %></td>
     <td><%= f.text_field :organization %></td>
-    <td><%= f.text_field :location %></td>
+    <td><%= f.text_field :city %></td>
+    <td><%= f.number_field :salary %></td>
+  </tr>
+  <tr align="left">
+    <th>Date Posted</th>
+    <th>Application Deadline</th>
+    <th>Date Applied</th>
+    <th>Other Deadline</th>
+  </tr>
+  <tr align="left">
+    <td><%= f.date_field :date_posted %></td>
+    <td><%= f.date_field :application_deadline %></td>
+    <td><%= f.date_field :applied_date %></td>
+    <td><%= f.date_field :other_deadline %></td>
+  </tr>
+  <tr align="left">
+    <th>Interview Date</th>
+    <th>Offer Date</th>
+  </tr>
+  <tr>
+    <td><%= f.date_field :interview_date %></td>
+    <td><%= f.date_field :offer_date %><td>
+  <tr align="left">
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td colspan="4"><%= f.text_area :description, size: "100x25"%></td>
+  </tr>
+
+<tr>
   <td>
     <%= f.submit "Create" %>
   </td>
 </tr>
-<% end %>
-</tbody>
+
 </table>
+<% end %>
