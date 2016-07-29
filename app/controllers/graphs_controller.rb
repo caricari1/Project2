@@ -2,7 +2,8 @@ class GraphsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @jobs = Job.where(user_id: current_user.id)
+    @jobs = Job.all
+  #  @pets = Pet.where(user_id: current_user.id
 
     @buckets = { "No Salary Data":0,  "< 40000":0, "40000 < 50000":0, "50000 < 60000":0, "60000 < 70000":0, ">70000":0 }
     @jobs.each do |job|
