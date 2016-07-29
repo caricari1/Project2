@@ -4,6 +4,7 @@
   <%= form_tag(jobs_path, :method => "get", class: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Job Titles" %>
   <%= submit_tag "Search Job Titles", class: 'button' %>
+  <%= link_to "Clear Search", jobs_path, class: "button" %>
   <% end %>
   <thead>
     <tr>

@@ -1,7 +1,9 @@
 class JobsController < ApplicationController
-
+  before_action :authenticate_user!
 
   def index
+    @jobs = Job.where(user_id: current_user.id)
+
     if params[:search]
       @jobs = Job.search(params[:search]).order("created_at DESC")
     else

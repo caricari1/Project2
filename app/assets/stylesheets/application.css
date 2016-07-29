@@ -15,7 +15,7 @@
  */
 
 header {
-  background: #CAEBF2;
+  background-color: #CAEBF2;
   height: 75px;
   padding: 0px;
   position: fixed;
@@ -26,7 +26,7 @@ header {
 
 h1 a {
   font-family: 'Lobster', cursive;
-  padding-left: 150px;
+  padding-left: 50px;
   text-decoration: none;
   color: black;
 }
@@ -59,10 +59,11 @@ div {
 }
 
 .welcome {
-  height: 500px;
+  height: 600px;
   width: 100%;
   background-image: url("student-849825_1920.jpg");
   background-size: cover;
+  z-index: -1;
 }
 
 .search-form {
