@@ -27,5 +27,22 @@ class GraphsController < ApplicationController
       end
       puts @applied
     end
+
+    @interviewed = []
+    @jobs.each do |job|
+      if job.interview_date
+        @interiewed << job
+      end
+      puts @interviewed
+    end
+
+    @offers = []
+    @jobs.each do |job|
+      if job.offer_date
+        @offers << job
+      end
+      puts @offers
+    end
+
   end
 end

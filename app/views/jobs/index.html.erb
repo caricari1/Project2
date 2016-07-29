@@ -1,5 +1,10 @@
 
+
 <table>
+  <%= form_tag(jobs_path, :method => "get", class: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Job Titles" %>
+  <%= submit_tag "Search Job Titles", class: 'button' %>
+  <% end %>
   <thead>
     <tr>
       <th>Title</th>
@@ -13,11 +18,7 @@
   </thead>
 
   <tbody>
-    <tr id="searchbox">
-      <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
-      <%= submit_tag "Search Job Titles", class: 'button' %>
-      <% end %>
+
     <% @jobs.each do |job| %>
     <tr>
         <td><%= job.title %></td>

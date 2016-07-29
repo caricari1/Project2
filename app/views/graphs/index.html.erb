@@ -1,13 +1,26 @@
 
 <section>
-    <h2>Total Jobs: <%= @jobs.count %></h2>
-    <h2>Applied:<%= @applied.count %></h2>
-    <h2>Interviews: </h2>
-    <h2>Offers: </h2>
+    <div>
+      <h2>Total Jobs: <%= @jobs.count %></h2>
+    </div>
+    <div>
+      <h2>Applied: <%= @applied.count %></h2>
+    </div>
+    <div>
+      <h2>Interviews: <%= @interviewed.count %></h2>
+    </div>
+    <div>
+      <h2>Offers: <%= @offers.count %></h2>
+    </div>
 </section>
 
-<%= bar_chart @jobs.group(:city).count %>
 
-<%= pie_chart @buckets %>
+<%= bar_chart @jobs.group(:city).count, colors:["rgb(146, 217, 215)"] %>
 
- <%= line_chart @jobs.group_by_week(:applied_date).count %>
+
+
+<%= pie_chart @buckets, colors:["rgb(240, 196, 125)", "rgb(146, 217, 215)", "rgb(204, 165, 214)", "rgb(132, 205, 221)", "rgb(252, 114, 87)"] %>
+
+
+
+ <%= line_chart @jobs.group_by_week(:applied_date).count, colors:["rgb(252, 114, 87)"] %>

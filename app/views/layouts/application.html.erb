@@ -10,10 +10,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div>
   <header>
     <div>
-    <h1>Search Organizer</h1>
+    <h1><%= link_to "Search Organizer", root_path %></h1>
     </div>
     <div>
       <h2><%= link_to "Dashboard",graphs_path %></h2>
@@ -22,7 +21,6 @@
       <h2><%= link_to "All Jobs", jobs_path %></h2>
     </div>
   </header>
-</div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

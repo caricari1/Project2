@@ -24,9 +24,11 @@ header {
   width: 100%;
 }
 
-h1 {
+h1 a {
   font-family: 'Lobster', cursive;
   padding-left: 150px;
+  text-decoration: none;
+  color: black;
 }
 
 h2 {
@@ -34,7 +36,7 @@ h2 {
   padding-left: 50px;
 }
 
-header a {
+h2 a {
   color: #555353;
   text-decoration: none;
   font-weight: bold;
@@ -42,7 +44,7 @@ header a {
 }
 
 section {
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 100px;
 }
 
@@ -51,12 +53,20 @@ div {
   font-size: 20px;
 }
 
+
 .content {
   margin-top: 100px;
 }
 
 .welcome {
-  background-image: url("student-849825_1920.jpg")
+  height: 500px;
+  width: 100%;
+  background-image: url("student-849825_1920.jpg");
+  background-size: cover;
+}
+
+.search-form {
+  margin-left: 200px;
 }
 
 table {
@@ -83,6 +93,7 @@ table tr {
 	text-align: center;
 	padding-left:19px;
 }
+
 
 table td {
 	padding:20px;
